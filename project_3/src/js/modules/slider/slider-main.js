@@ -1,8 +1,8 @@
 import Slider from "./slider";
 
 export default class MainSlider extends Slider {
-  constructor(btns) {
-    super(btns);
+  constructor(btns, prevModule, nextModule) {
+    super(btns, prevModule, nextModule);
   }
 
   showSlides(n) {
@@ -40,28 +40,59 @@ export default class MainSlider extends Slider {
     this.showSlides((this.slideIndex += n));
   }
 
+  bindTriggers() {
+    // --------- main func
+    this.btns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        this.plusSlides(1);
+      });
+
+      //click on logo
+      btn.parentNode.previousElementSibling.addEventListener("click", (e) => {
+        e.preventDefault;
+        this.slideIndex = 1;
+        this.showSlides(this.slideIndex);
+      });
+    });
+
+    // this.prevModule.forEach((item) => {
+    //   item.addEventListener("click", (e) => {
+    //     e.stopPropagation();
+    //     e.preventDefault();
+    //     this.plusSlides(-1);
+    //   });
+    // });
+
+    // this.nextModule.forEach((item) => {
+    //   item.addEventListener("click", (e) => {
+    //     e.stopPropagation();
+    //     e.preventDefault();
+    //     this.plusSlides(1);
+    //   });
+    // });
+  }
+
+  bindHorizontalTriggers(module, n) {
+    module.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        this.plusSlides(n);
+      });
+    });
+  }
+
   render() {
-    try {
+    if (this.container) {
       //hanson on page 3
       try {
         this.hanson = document.querySelector(".hanson");
       } catch (e) {}
 
-      // --------- main func
-      this.btns.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          this.plusSlides(1);
-        });
-
-        //click on logo
-        btn.parentNode.previousElementSibling.addEventListener("click", (e) => {
-          e.preventDefault;
-          this.slideIndex = 1;
-          this.showSlides(this.slideIndex);
-        });
-      });
-
       this.showSlides(this.slideIndex);
-    } catch (e) {}
+      this.bindTriggers();
+      this.bindHorizontalTriggers(this.prevModule, -1);
+      this.bindHorizontalTriggers(this.nextModule, 1);
+    }
   }
 }
