@@ -32,3 +32,51 @@ $("button")
   .on("click", () => {
     $(".w-500").fadeToggle(800);
   });
+
+// $(".wrap").html(
+//   `
+//     <div class="dropdown">
+//         <button class="btn btn-primary dropdown-toggle" id="dropdownMenuBtn">
+//           Dropdown
+//         </button>
+//         <div class="dropdown-menu" data-toggle-id="dropdownMenuBtn">
+//           <a href="#" class="dropdown-item">Action #1</a
+//           ><a href="#" class="dropdown-item">Action #2</a
+//           ><a href="#" class="dropdown-item">Action #3</a>
+//         </div>
+//     </div>
+//     `
+// );
+// $(".dropdown-toggle").dropdown();
+
+$("#trigger").click(() =>
+  $("#trigger").createModal({
+    text: {
+      title: "Modal title",
+      body:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid excepturi inventore voluptates consequatur nulla quo eos consequuntur maiores.",
+    },
+    btns: {
+      count: 3,
+      settings: [
+        ["Close", ["btn-danger", "mr-10"], true],
+        [
+          "Save changes",
+          ["btn-success"],
+          false,
+          () => {
+            alert("Yeah!");
+          },
+        ],
+        [
+          "Another btn",
+          ["btn-warning", "ml-10"],
+          false,
+          () => {
+            alert("Hi, fella!");
+          },
+        ],
+      ],
+    },
+  })
+);
