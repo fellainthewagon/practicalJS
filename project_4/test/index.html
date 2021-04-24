@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <section class="promo">
+      <div class="container">
+        <h1 class="text-center">Lorem ipsum dolor sit amet.</h1>
+        <h2 class="text-center mt-20">Lorem, ipsum dolor.</h2>
+
+        <!-- carousel -->
+        <div class="carousel" id="example">
+          <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0"></li>
+            <li data-slide-to="1"></li>
+            <li data-slide-to="2"></li>
+            <li data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-slides">
+              <div class="carousel-item">
+                <img
+                  src="https://www.tasteofhome.com/wp-content/uploads/2019/10/raw-fresh-marbled-meat-steak-filet-shutterstock_354800282.jpg?w=1200"
+                  alt="photo"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://www.tasteofhome.com/wp-content/uploads/2019/10/raw-strip-loin-steak-on-white-shutterstock_738822874.jpg?w=1200"
+                  alt="photo"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://www.tasteofhome.com/wp-content/uploads/2019/10/raw-tomahawk-steak-shutterstock_738822868.jpg?w=1200"
+                  alt="photo"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="https://www.tasteofhome.com/wp-content/uploads/2019/10/raw-top-blade-steak-on-wooden-shutterstock_738824878.jpg?w=1200"
+                  alt="photo"
+                />
+              </div>
+            </div>
+          </div>
+          <a href="#" class="carousel-prev" data-slide="prev">
+            <span class="carousel-prev-icon">&lt;</span>
+          </a>
+          <a href="#" class="carousel-next" data-slide="next">
+            <span class="carousel-next-icon">&gt;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="goods">
+      <div class="container">
+        <h2 class="text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, porro.
+        </h2>
+        <div class="goods_items d-flex">
+          <!-- Card -->
+          <div class="goods d-flex f-space-around">
+            <div class="card mt-20">
+              <img
+                class="card-img"
+                src="https://www.tasteofhome.com/wp-content/uploads/2019/10/beef-raw-rump-steak-salt-pepper-shutterstock_675988459.jpg?w=1200"
+                alt="photo"
+              />
+              <div class="card-body">
+                <div class="card-title">Card title 1</div>
+                <p class="card-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Fuga, harum.
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  data-toggle="modal"
+                  data-target="#example"
+                  >Link to</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="goods d-flex f-space-around">
+            <div class="card mt-20 ml-20">
+              <img
+                class="card-img"
+                src="https://www.tasteofhome.com/wp-content/uploads/2019/10/hanging-tender-steak-on-stone-shutterstock_738824938.jpg?w=1200"
+                alt="photo"
+              />
+              <div class="card-body">
+                <div class="card-title">Card title 1</div>
+                <p class="card-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Fuga, harum.
+                </p>
+                <a href="#" class="btn btn-primary">Link to</a>
+              </div>
+            </div>
+          </div>
+          <div class="goods d-flex f-space-around">
+            <div class="card mt-20 ml-20">
+              <img
+                class="card-img"
+                src="https://www.tasteofhome.com/wp-content/uploads/2019/10/raw-porterhouse-steak-dryaged-on-wooden-shutterstock_738832501.jpg?w=1200"
+                alt="photo"
+              />
+              <div class="card-body">
+                <div class="card-title">Card title 1</div>
+                <p class="card-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Fuga, harum.
+                </p>
+                <a href="#" class="btn btn-primary">Link to</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- modal -->
+    <div class="modal" id="example">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close" data-close>
+            <span>&times;</span>
+          </button>
+          <div class="modal-header">
+            <div class="modal-title">Modal title 2</div>
+            <div class="modal-body">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid
+              excepturi inventore.
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-danger" data-close>Close</button>
+              <button class="btn btn-success">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
